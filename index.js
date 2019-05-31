@@ -23,7 +23,7 @@ function viewCart() {
   } else {
     var str = "In your cart, you have "
     for (let i = 0; i < cart.length; i++) {
-      str = str + `${i === 0 ? '' : ', and '}${cart[i]["itemName"]} at \$${cart[i]["itemPrice"]}`
+      str = str + `${i === 0 ? '' : ', '}${i === cart.length - 2 ? 'and ' : ''}${cart[i]["itemName"]} at \$${cart[i]["itemPrice"]}`
     }
     str = str + '.'
     return str
